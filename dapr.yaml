@@ -1,0 +1,14 @@
+version: 1
+apps:
+  - appDirPath: .
+    appID: weather-api
+    appPort: 3333
+    appProtocol: http
+    daprHttpPort: 3500
+    command: ["npx", "nx", "serve","weather-api"]
+  - appDirPath: .
+    appID: weather-caller
+    appPort: 3000
+    appProtocol: http
+    daprHttpPort: 3501
+    command: ["npx", "nx", "serve","weather-caller"]
